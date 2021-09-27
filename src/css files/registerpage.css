@@ -1,0 +1,83 @@
+.register-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(188,227,248);
+    background: linear-gradient(90deg, rgba(188,227,248,1) 49%, rgba(255,255,255,1) 49%);
+}
+.register-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    min-width: 400px;
+    height: 75vh;
+    background-color: white;
+    box-shadow: -1px -2px 18px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px -2px 18px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -2px 18px 4px rgba(0,0,0,0.75);
+    padding: 8px 0px;
+    /* opacity: .65;
+    transition: opacity .5s ease-in; */
+    animation: showhide 1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    animation-play-state: running;
+}
+
+@keyframes showhide {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+/* .register-card:hover{
+    opacity: 1;
+    transform: opacity;
+} */
+
+.register-actions{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.register-actions>*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.register-display-card{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 78%;
+    width: 80%;
+    animation: showhide .55s ease-in;
+    animation-play-state: running;
+}
+.register-title{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register-content{
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    padding: 0px 10%;
+    align-items: stretch;
+    justify-content: space-evenly;
+}

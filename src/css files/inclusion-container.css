@@ -1,0 +1,131 @@
+.inclusion{
+    width: 100vw;
+    padding-left: var(--padding-all);
+    padding-right: var(--padding-all);
+    background-color: var(--color-light-blue);
+}
+.small-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.para-inclusion{
+    font-family: 'Sintony', sans-serif;
+    font-size: 16px;
+}
+.bold{
+    color:var(--color-blue);
+    font-weight: 800;
+}
+.normal{
+    color: var(--color-blue);
+}
+.inclusion-section{
+    display: flex;
+    padding-bottom: 25px;
+}
+.inclusion-section-text{
+    padding-top: 50px;
+    width: 55%;
+    height: 100%;
+}
+.inclusion-section-svg{
+    width: auto;
+    height: 100%;
+}
+.question-font{
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin: 0;
+    color: var(--color-blue);
+}
+.inclusion-text{
+    margin-top: 0px;
+    font-family: 'Sintony';
+    font-weight: 600;
+    font-size: small;   
+}
+.inclusion-btn{
+    color:white;
+    background-color: var(--color-blue);
+    font-family: 'Sintony', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    padding:10px 30px;
+    width: 70%;
+    height: 45px;
+    text-align: center;
+    margin-top: 30px;
+}
+.section2{
+    width: 100vw;
+    padding-left: var(--padding-all);
+    padding-right: var(--padding-all);
+    padding-bottom: 65px;
+    /* background-color: var(--color-light-blue); */
+}
+.section2-para{
+        font-family: 'Sintony';
+        text-align: center;
+        font-weight: 600;
+        font-size: x-small;   
+}
+.people-section{
+    padding-top:28px;
+    padding-bottom: 28px;
+}
+.section3{
+    padding-top: 65px;
+    padding-bottom: 50px;
+    padding-right: var(--padding-all);
+    padding-left: var(--padding-all);
+    background-color: var(--color-light-blue);
+    width: 100vw;
+    display: flex;
+}
+.section3-text{
+    width: 60%;
+    padding-right: 35px;
+}
+.section3-svg{
+    width: 40%;
+    /* height: 370px; */
+}
+.contact-section{
+    display: flex;
+    height: 210px;
+    padding-left: var(--padding-all);
+    padding-right: var(--padding-all);
+    border-bottom: 80px;
+    border-color: var(--color-light-blue);
+}
+.contact-section-svg{
+    width: 50%;
+}
+.contact-info-container{
+    width: 50%;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blanck{
+    width: 100vw;
+    padding-left: var(--padding-all);
+    padding-right: var(--padding-all);
+    background-color: var(--color-light-blue);
+    min-height: 120px;
+    z-index: -1;
+}
+.footer-end{
+    min-height: 50px;
+    width: 100vw;
+    padding-left: var(--padding-all);
+    padding-right: var(--padding-all);
+    background-color: var(--color-blue);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
