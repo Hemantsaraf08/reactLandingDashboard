@@ -3,13 +3,7 @@ import React,{useState} from 'react'
 export const UserContext=React.createContext();
 
 function AuthProvider({children}) {
-    // const toggleUser=()=>{
-    //     setloginState({...loginState, currUser:!loginState.currUser})
-    // }
-    const[currUser,setcurrUser] =useState(1);
-    //     currUser:0,
-    //     setCurrUser: toggleUser
-    // });
+    const[currUser,setcurrUser] =useState(0);
     const value={
         currUser, 
         setcurrUser

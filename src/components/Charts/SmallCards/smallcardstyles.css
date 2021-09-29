@@ -1,0 +1,18 @@
+.smallcard-primary-label{
+    color: rgb(107, 119, 140);
+    line-height: 1.6;
+    font-weight: 500;
+}
+.smallcard-primary-number{
+    line-height: 1.6;
+    font-weight: 500;
+}
+.smallcard-secondary-divider{
+    padding-top: 16px;
+}
+
+.smallcard-primary-number
+.smallcard-primary-label
+.smallcard-secondary-number{
+    text-align: center;
+}

@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { createTheme} from '@material-ui/core/styles'
 import { ThemeProvider} from '@mui/styles';
 import Landing from "./components/Landing";
 import RegisterPage from "./components/RegisterPage";
 import AuthProvider from "./components/AuthProvider";
-
+// import Sidebar from './components/Navbar/Sidebar';
+import Appbar from './components/appbar/Appbar'
 const theme = {
   palette: {
     primary: {
@@ -33,6 +33,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/register" component={RegisterPage} />
+            <Route path='/dashboard' component={Appbar}/>
           </Switch>
         </Router>
         </AuthProvider>

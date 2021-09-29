@@ -1,0 +1,54 @@
+.scrollhost {
+    scrollbar-width: none;
+   -ms-overflow-style: none;
+ }
+ 
+ .scrollhost::-webkit-scrollbar {
+   display: none;
+ }
+ .MuiDrawer-paper{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+ }
+ .MuiDrawer-paper::-webkit-scrollbar {
+    display: none;
+  }
+ .scroll-bar {
+    width: 8px;
+    height: 100%;
+    right: 0;
+    top: 0px;
+    position: absolute;
+    border-radius: 7px;
+    bottom: 0px;
+    background-color: #e0e0e0;
+  }
+  .scrollhost-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .scroll-thumb {
+    width: 6px;
+    height: 20px;
+    margin-left: 1px;
+    position: absolute;
+    border-radius: 7px;
+    opacity: 1;
+    top: 0;
+    background-color: #c2c2c2;
+  }
+  .header-mobile-options{
+      height: 0px; 
+      animation:increaseht .55s ease-in-out forwards;
+      animation-play-state: running;
+      
+  }
+@keyframes increaseht {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 40px;
+    }
+}
