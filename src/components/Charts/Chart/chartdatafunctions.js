@@ -86,3 +86,32 @@ export const getStateVaccinated2 = (data) => {
   }
   return vaccinated2Arr;
 };
+export const getDistrictsvaccinationdata = (data) => {
+  let objofdistricts = {}; //key is state name not code and val is district obj;
+  for (let key in data) {
+    if (data[key].meta?.population > 30000000 && key !== "TT") {
+      //for popln. more than 3Cr.
+      let keyName = ans[key] !== undefined ? ans[key] : "Unknown State";
+      let districts = data[key]?.districts;
+      let innerArray = [];
+      for (let singleDistrict in districts) {
+        if (
+          districts[singleDistrict].total?.vaccinated2 &&
+          districts[singleDistrict].meta?.population
+        ) {
+          let vdose = districts[singleDistrict].total?.vaccinated2;
+          let dpopulation = districts[singleDistrict].meta?.population;
+
+          innerArray.push({
+            x: singleDistrict,
+            y: Math.round((vdose * 10000) / dpopulation) / 100
+          });
+        } else {
+          continue;
+        }
+      }
+      objofdistricts[keyName] = innerArray;
+    }
+  }
+  return objofdistricts;
+};

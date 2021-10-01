@@ -1,31 +1,20 @@
 import "./chart1styles.css";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import ReactApexChart from "react-apexcharts";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import LinearProgress from "@mui/material/LinearProgress";
+
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import {
-  fetchdata,
-  getStatecodes,
-  getStatePopulation,
-  getStateVaccinated1,
-  getStateVaccinated2
-} from "./chartdatafunctions";
-export default function ChartOne() {
-  const [statecodesArr, setstatecodesArr] = useState(null);
-  const [statepopulationArr, setstatepopulationArr] = useState(null);
-  const [statevaccinate1, setstatevaccinate1] = useState(null);
-  const [statevaccinate2, setstatevaccinate2] = useState(null);
-  const [error, setError] = useState(null);
+
+export default function ChartOne({statecodesArr, statepopulationArr, statevaccinate1,statevaccinate2}) {
   const limit = 5;
   const [startingPoint, setstartingPoint] = useState(0);
-  const [chartReady, setchartReady] = useState(false);
+
   const handleNextClick = () => {
     setstartingPoint(startingPoint + limit);
   };
@@ -90,36 +79,9 @@ export default function ChartOne() {
       data: statevaccinate2?.slice(startingPoint, limit + startingPoint)
     }
   ];
-  useEffect(() => {
-    async function dataProcessing() {
-      try {
-        let data = await fetchdata(
-          "https://data.covid19india.org/v4/min/data.min.json"
-        );
-        let codes = getStatecodes(data);
-        let statePopulationArr = getStatePopulation(data);
-        let vaccinated1Arr = getStateVaccinated1(data);
-        let vaccinated2Arr = getStateVaccinated2(data);
-        setstatecodesArr(codes);
-        setstatepopulationArr(statePopulationArr);
-        setstatevaccinate1(vaccinated1Arr);
-        setstatevaccinate2(vaccinated2Arr);
-        setchartReady(true);
-        console.log({ chartReady });
-      } catch (e) {
-        console.log(e);
-        setError(e.message);
-      }
-    }
-    dataProcessing();
-  }, [chartReady]);
+
   return (
     <>
-      {error ? (
-        <h2>{error}</h2>
-      ) : !chartReady ? (
-        <LinearProgress />
-      ) : (
         <>
           <Card>
             <CardHeader
@@ -169,7 +131,7 @@ export default function ChartOne() {
             </CardContent>
           </Card>
         </>
-      )}
+
     </>
   );
 }

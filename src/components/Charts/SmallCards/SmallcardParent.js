@@ -2,6 +2,11 @@ import React,{useState, useEffect} from 'react'
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Typography } from '@mui/material';
+import SmallcardChild3 from './SmallcardChild3';
+import SmallcardChild1 from './SmallcardChild1';
+import SmallcardChild2 from './SmallcardChild2';
+import SmallcardChild4 from './SmallcardChild4';
+import './smallcardstyles.css'
 function SmallcardParent() {
   const [carddatastatsObj, setcarddatastatsObj]=useState(null);
   const [error, setError]=useState(null);
@@ -34,7 +39,7 @@ function SmallcardParent() {
           todayscases:data1.todayCases,
           totaldeaths:data1.deaths,
           todaysdeaths:data1.todayDeaths,
-          recoveryrate:Math.round(data1.cases*100/data1.deaths)/100,
+          recoveryrate:Math.round(data1.recovered*10000/data1.cases)/100,
           recoveredtoday:data1.todayRecovered,
           todaysDate: fetchDate,
           totalvaccinated:data2.timeline[reqdate1],
@@ -56,10 +61,14 @@ function SmallcardParent() {
                     <CircularProgress/>
                   ) : (<>
                     <Typography variant='subtitle1'>Last data fetched on: {carddatastatsObj.todaysDate}</Typography>
+                    <div style={{display: "flex", width: '100%'}}>
                     <SmallcardChild1 totalCases={carddatastatsObj.totalcases} todaysCases={carddatastatsObj.todayscases}/>
                     <SmallcardChild2 totalDeaths={carddatastatsObj.totaldeaths} todaysDeaths={carddatastatsObj.todaysdeaths}/>
                     <SmallcardChild3 totalVaccinated={carddatastatsObj.totalvaccinated} vaccinationrateinc={carddatastatsObj.vaccinationrateinc}/>
                     <SmallcardChild4 recoveryRate={carddatastatsObj.recoveryrate} recoveredToday={carddatastatsObj.recoveredtoday}/>
+                    </div>
+
+                    
                   </>)
             }
         </>
