@@ -23,7 +23,7 @@ function SignIn(props) {
     const handleClick=(e)=>{
         e.preventDefault();
         setcurrUser(1);
-        history.push('/data-visualisation')
+        history.push('/dashboard')
     }
     return (
         <div className='register-display-card'>

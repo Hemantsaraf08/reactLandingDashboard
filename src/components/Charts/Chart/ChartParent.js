@@ -4,6 +4,8 @@ import ChartOne from './ChartOne'
 import ChartTwo from './ChartTwo';
 import ChartThree from './ChartThree';
 import DataTable from './DataTable';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import {
     fetchdata,
     getStatecodes,
@@ -15,13 +17,13 @@ import {
 
 
 function ChartParent() {
+  console.log('I chartparent was played')
     const [statecodesArr, setstatecodesArr] = useState(null);
   const [statepopulationArr, setstatepopulationArr] = useState(null);
   const [statevaccinate1, setstatevaccinate1] = useState(null);
   const [statevaccinate2, setstatevaccinate2] = useState(null);
   const [objofDistrictdata, setobjofDistrictdata]=useState(null);
   const [error, setError] = useState(null);
-  console.log('district data',objofDistrictdata);
   const [chartReady, setchartReady] = useState(false);
   useEffect(() => {
     async function dataProcessing() {
@@ -56,10 +58,29 @@ function ChartParent() {
         <LinearProgress />
       ) : ( 
           <>
+            <Grid item xs={12} md={7}>
+              <Paper>
+
             <ChartOne statecodesArr={statecodesArr} statepopulationArr={statepopulationArr} statevaccinate1={statevaccinate1} statevaccinate2={statevaccinate2}/>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={5}>
+              <Paper>
+
             <ChartTwo statecodesArr={statecodesArr} statepopulationArr={statepopulationArr} statevaccinate2={statevaccinate2}/>
+              </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper>
+
             <ChartThree objofDistrictdata={objofDistrictdata}/>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <Paper>
             <DataTable statecodesArr={statecodesArr} statepopulationArr={statepopulationArr} statevaccinate1={statevaccinate1} statevaccinate2={statevaccinate2}/>
+              </Paper>
+            </Grid>
           </>
         )}
         </>

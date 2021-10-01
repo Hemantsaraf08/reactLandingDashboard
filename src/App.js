@@ -3,7 +3,6 @@ import { ThemeProvider} from '@mui/styles';
 import Landing from "./components/Landing";
 import RegisterPage from "./components/RegisterPage";
 import AuthProvider from "./components/AuthProvider";
-// import Sidebar from './components/Navbar/Sidebar';
 import Appbar from './components/appbar/Appbar'
 const theme = {
   palette: {

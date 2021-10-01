@@ -44,8 +44,8 @@ function Landing() {
                         <p className="nav-single-item para">LEARNING LAB</p>
                     </div>
                     <hr className="navbar-line" />
-                    <div style={{ cursor: 'pointer' }} className="nav-items">
-                        <p className="nav-single-item para">DATA VISUALISATION</p>
+                    <div style={{ cursor: 'pointer' }} onClick={()=>history.push('/dashboard')} className="nav-items">
+                        <p className="nav-single-item para">DASHBOARD</p>
                     </div>
                     <hr className="navbar-line" />
                     <div className="nav-items logindiv" onClick={handleLoginClick}>

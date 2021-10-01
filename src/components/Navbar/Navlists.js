@@ -10,25 +10,26 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import RoomIcon from '@mui/icons-material/Room';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import './navliststyle.css'
 export default function Navlists() {
     const [sb_gettingStartedopen, setsb_gettingStartedopen] = React.useState(false);
     const [sb_locationopen, setsb_locationopen] = React.useState(false);
     const [sb_discoveropen, setsb_discoveropen] = React.useState(false);
     const discoverList = (
         <>
-            <ListItemButton onClick={() => setsb_discoveropen(!sb_discoveropen)}>
-                <ListItemIcon>
-                    <ReadMoreIcon />
+            <ListItemButton className='nav-list-container' onClick={() => setsb_discoveropen(!sb_discoveropen)}>
+                <ListItemIcon className="nav-icon-container">
+                    <ReadMoreIcon className="nav-icon"/>
                 </ListItemIcon>
-                <ListItemText primary="Discover More" />
-                {sb_discoveropen ? <ExpandLess /> : <ExpandMore />}
+                <ListItemText disableTypography className="nav-header-text" primary="Discover More" />
+                {sb_discoveropen ? <ExpandLess style={{fill: 'blue'}} /> : <ExpandMore style={{fill: 'blue'}} />}
             </ListItemButton>
-            <Collapse in={sb_discoveropen} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+            <Collapse in={sb_discoveropen}  style={{backgroundColor: '#fff7f7' }} timeout="auto" unmountOnExit>
+                <List component="div" className='navlist-item-container'>
                     {
                         ["Vision", "Showcase", "Roadmap", "Sponcers", "Team"].map((item, index) => (
-                            <ListItemButton key={index} sx={{ pl: 4 }}>
-                                <ListItemText primary={item} />
+                            <ListItemButton key={index} className='navlist-item'>
+                                <ListItemText className='navlist-item-text' disableTypography primary={item} />
                             </ListItemButton>
                         ))
                     }
@@ -38,19 +39,19 @@ export default function Navlists() {
     )
     const locationsList = (
         <>
-            <ListItemButton onClick={() => setsb_locationopen(!sb_locationopen)}>
-                <ListItemIcon>
-                    <RoomIcon />
+            <ListItemButton className='nav-list-container' onClick={() => setsb_locationopen(!sb_locationopen)}>
+                <ListItemIcon className='nav-icon-container'>
+                    <RoomIcon className='nav-icon'/>
                 </ListItemIcon>
-                <ListItemText primary="Locations" />
-                {sb_locationopen ? <ExpandLess /> : <ExpandMore />}
+                <ListItemText disableTypography className='nav-header-text' primary="Locations" />
+                {sb_locationopen ? <ExpandLess style={{fill: 'blue'}} /> : <ExpandMore style={{fill: 'blue'}}/>}
             </ListItemButton>
-            <Collapse in={sb_locationopen} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+            <Collapse in={sb_locationopen} style={{backgroundColor: '#fff7f7' }} timeout="auto" unmountOnExit>
+                <List component="div" className='navlist-item-container'>
                     {
                         ["Center1", "Center2", "Center3", "Center4"].map((item, index) => (
-                            <ListItemButton key={index} sx={{ pl: 4 }}>
-                                <ListItemText primary={item} />
+                            <ListItemButton key={index} className='navlist-item'>
+                                <ListItemText disableTypography className='navlist-item-text' primary={item} />
                             </ListItemButton>
                         ))
                     }
@@ -60,19 +61,19 @@ export default function Navlists() {
     )
     const gettingStartedList = (
         <>
-            <ListItemButton onClick={() => setsb_gettingStartedopen(!sb_gettingStartedopen)}>
-                <ListItemIcon>
-                    <TextSnippetIcon />
+            <ListItemButton  className="nav-list-container" onClick={() => setsb_gettingStartedopen(!sb_gettingStartedopen)}>
+                <ListItemIcon className="nav-icon-container">
+                    <TextSnippetIcon className="nav-icon"/>
                 </ListItemIcon>
-                <ListItemText primary="Getting Started" />
-                {sb_gettingStartedopen ? <ExpandLess /> : <ExpandMore />}
+                <ListItemText className='nav-header-text' disableTypography primary="Getting Started" />
+                {sb_gettingStartedopen ? <ExpandLess style={{fill: 'blue'}}/> : <ExpandMore style={{fill: 'blue'}}/>}
             </ListItemButton>
-            <Collapse style={{backgroundColor: '#faf7f7' }}in={sb_gettingStartedopen} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+            <Collapse style={{backgroundColor: '#fff7f7' }}in={sb_gettingStartedopen} timeout="auto" unmountOnExit>
+                <List component="div"  className='navlist-item-container'>
                     {
                         ["Usage", "Examples", "Support", "FAQs"].map((item, index) => (
-                            <ListItemButton key={index} sx={{ pl: 4 }}>
-                                <ListItemText primary={item} />
+                            <ListItemButton key={index} className='navlist-item'>
+                                <ListItemText disableTypography className='navlist-item-text' primary={item} />
                             </ListItemButton>
                         ))
                     }

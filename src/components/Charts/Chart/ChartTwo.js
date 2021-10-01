@@ -57,7 +57,7 @@ function ChartTwo({ statecodesArr, statepopulationArr, statevaccinate2 }) {
           options={options}
           series={series}
           type="treemap"
-          height={460}
+          height={485}
         />
       </CardContent>
     </Card>

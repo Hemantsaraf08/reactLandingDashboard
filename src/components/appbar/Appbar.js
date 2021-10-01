@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {useRef, useEffect} from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
@@ -18,31 +17,22 @@ import { useTheme} from '@mui/styles';
 import '../Navbar/navbarstyle.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import ReplayIcon from '@mui/icons-material/Replay';
 import vector from '../../svgs/Vector.svg'
 import { useHistory } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SmallcardParent from '../Charts/SmallCards/SmallcardParent';
 import ChartParent from '../Charts/Chart/ChartParent';
-
+import Tooltip from '@mui/material/Tooltip';
+import Grid from '@mui/material/Grid';
 const drawerWidth = 240;
-// const useStyles = makeStyles(theme => ({
-//     appname: {
-//         fontFamily: theme.typography.fontFamily,
-//         //   [theme.breakpoints.up('sm')]: {
-//         //     // marginLeft: theme.spacing(3),
-//         //     // width: 'auto',
-//         //     textAlign: "center"
-//         //   }
-//     },
-// }))
+
 function ResponsiveDrawer(props) {
-    const mobileOptions=useRef();
     const myTheme = useTheme();
     const history = useHistory();
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [mobileDrawerOpen, setmobileDrawerOpen] = React.useState(false);
+    const [mobileMenuOpen, setmobileMenuOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -64,9 +54,37 @@ function ResponsiveDrawer(props) {
             },
         },
     }));
+
+    const Search = styled('div')(({ theme }) => ({
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: alpha(theme.palette.common.white, 0.25),
+        },
+        marginRight: theme.spacing(1),
+        marginLeft: '1rem',
+        width: '25%',
+        [theme.breakpoints.down('sm')]: {
+            // marginLeft: theme.spacing(3),
+            width: 'auto',
+            display: 'none'
+        },
+    }));
+
+    const SearchIconWrapper = styled('div')(({ theme }) => ({
+        padding: theme.spacing(0, 2),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }));
+
     const drawer = (
         <div>
-            <Toolbar onClick={() => history.push('/')} style={{ backgroundColor: myTheme.palette.primary.main, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Toolbar aria-label='app-logo'  onClick={() => history.push('/')} style={{ backgroundColor: myTheme.palette.primary.main, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <img src={vector} alt="logo" />
             </Toolbar>
             <Divider />
@@ -87,32 +105,7 @@ function ResponsiveDrawer(props) {
             <Sidebar />
         </div>
     );
-    const Search = styled('div')(({ theme }) => ({
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        marginRight: theme.spacing(5),
-        marginLeft: '5rem',
-        width: '25%',
-        [theme.breakpoints.down('sm')]: {
-            // marginLeft: theme.spacing(3),
-            width: 'auto',
-            display: 'none'
-        },
-    }));
-
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
+   
     //   const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
@@ -132,7 +125,8 @@ function ResponsiveDrawer(props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        // sx={{ mr: 2, display: { sm: 'block' } }}
+                        className='menu-icon'
                     >
                         <MenuIcon />
                     </IconButton>
@@ -152,8 +146,8 @@ function ResponsiveDrawer(props) {
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
+                        className='toolbar-icon'
                         onClick={() => window.open("https://github.com/Hemantsaraf08/reactLandingDashboard", "_blank")}
-                        sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
                     >
                         <GitHubIcon style={{ fontSize: '2rem' }} />
                     </IconButton>
@@ -162,24 +156,27 @@ function ResponsiveDrawer(props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={() => window.open("https://www.linkedin.com/in/hemant-saraf-80b87b68/", "_blank")}
-                        sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
+                        className='toolbar-icon'
                     >
                         <LinkedInIcon style={{ fontSize: '2rem' }} />
                     </IconButton>
+                    <Tooltip title="Fetch latest data">
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
-                        sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
+                        className='toolbar-icon'
+                        onClick={()=>window.location.reload()}
                     >
-                        <NotificationsNoneIcon style={{ fontSize: '2rem' }} />
+                        <ReplayIcon style={{ fontSize: '2rem' }} />
                     </IconButton>
+                    </Tooltip>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleLogout}
-                        sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
+                        className='toolbar-icon'
                     >
                         <LogoutIcon style={{ fontSize: '2rem' }} />
                     </IconButton>
@@ -187,13 +184,14 @@ function ResponsiveDrawer(props) {
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
-                        onClick={() => setmobileDrawerOpen(!mobileDrawerOpen)}
-                        sx={{ mr: 2, display: { sm: 'none', xs: 'block' } }}
+                        onClick={() => setmobileMenuOpen(!mobileMenuOpen)}
+                        // style={{display: {mobileOpen}?'none':'block'}}
+                        className='menu-icon'
                     >
                         <MoreVertIcon />
                     </IconButton>
                 </Toolbar>
-                <div ref={mobileOptions} className='header-mobile-options' style={{ backgroundColor: myTheme.palette.primary.main, display: mobileDrawerOpen ? 'flex' : 'none', justifyContent: 'space-around', alignItems: 'center' }}>
+                <div className='header-mobile-options' style={{ backgroundColor: myTheme.palette.primary.main, display: mobileMenuOpen ? 'flex' : 'none', justifyContent: 'space-around', alignItems: 'center', position: 'sticky', width: '100%', height: '50px' }}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -212,14 +210,17 @@ function ResponsiveDrawer(props) {
                     >
                         <LinkedInIcon />
                     </IconButton>
+                    <Tooltip title='Fetch latest data'>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
+                        onClick={()=>window.location.reload()}
                     //sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
                     >
-                        <NotificationsNoneIcon />
+                        <ReplayIcon />
                     </IconButton>
+                    </Tooltip>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -263,10 +264,20 @@ function ResponsiveDrawer(props) {
                     {drawer}
                 </Drawer>
             </Box>
-            <Box component="main" sx={{flexGrow: 1, p: 3, padding: "70px 24px 24px" }}>
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+            <div className='top-div'>
+                <div style={{marginTop: '80px', paddingLeft: '30px'}}>
+            <Typography variant='h2'>India Covid statistics</Typography>
+            <Typography variant='subtitle1'>Last data fetched on: {new Date().toString().substring(0,24)}</Typography>
+                 </div>   
+            </div>
+            <Box component="main" sx={{flexGrow: 1, marginTop:'-5.5rem' ,padding: "40px 15px 10px 15px" , width: {sm:`calc(100vw - ${drawerWidth}px)`, xs: '100vw'}, ml: { sm: `${drawerWidth}px` }}}>
+            <Grid container  spacing={3}>
                 <SmallcardParent/>
                 <ChartParent/>
+            </Grid>
             </Box>
+            </div>
         </Box>
     );
 }

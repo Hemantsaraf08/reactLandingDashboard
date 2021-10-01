@@ -10,7 +10,7 @@ function SmallcardChild1({totalCases, todaysCases}) {
         <Card>
             <CardContent>
                 <Typography variant='h6' gutterBottom={true} className='smallcard-primary-label'>TOTAL CASES</Typography>
-                <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{totalCases}</Typography>
+                <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{Math.round((totalCases*100)/10000000)/100} Cr</Typography>
                 <Divider className='smallcard-secondary-divider'><Typography className='smallcard-secondary-label'>TODAY</Typography></Divider>
                 <Typography variant='subtitle1' className='smallcard-secondary-number'>{todaysCases}</Typography>
             </CardContent>

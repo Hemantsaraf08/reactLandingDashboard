@@ -10,7 +10,8 @@ function SmallcardChild4({recoveryRate, recoveredToday}) {
         <Card>
             <CardContent>
                 <Typography variant='h6' gutterBottom={true} className='smallcard-primary-label'>RECOVERY RATE</Typography>
-                <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{recoveryRate}<Typography variant='h3'>%</Typography></Typography>
+                <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{recoveryRate}</Typography>
+                <Typography variant='h3'component='span'>%</Typography>
                 <Divider className='smallcard-secondary-divider'><Typography className='smallcard-secondary-label'>RECOVERED TODAY</Typography></Divider>
                 <Typography variant='subtitle1' className='smallcard-secondary-number'>{recoveredToday}</Typography>
             </CardContent>

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { useState, useCallback, useRef, useEffect } from "react";
 import List from '@mui/material/List';
-import Navlists from './Navlists';
 import BookIcon from '@mui/icons-material/Book';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import Navlists from './Navlists';
 import './navbarstyle.css'
-
+import './navliststyle.css'
 const SCROLL_BOX_MIN_HEIGHT = 350;
 
 export default function NestedList() {
@@ -89,6 +89,7 @@ export default function NestedList() {
           document.removeEventListener("mouseleave", handleDocumentMouseUp);
         };
       }, [handleDocumentMouseMove, handleDocumentMouseUp]);
+
       useEffect(() => {
         const scrollHostElement = scrollHostRef.current;
         const { clientHeight, scrollHeight } = scrollHostElement;
@@ -123,18 +124,18 @@ export default function NestedList() {
                 >
                     <Navlists />
                     <Divider />
-                    <ListItemButton>
-                        <ListItemIcon>
-                            <BookIcon />
+                    <ListItemButton className='nav-list-container'>
+                        <ListItemIcon className='nav-icon-container'>
+                            <BookIcon className='nav-icon'/>
                         </ListItemIcon>
-                        <ListItemText primary="Blogs" />
+                        <ListItemText disableTypography className='nav-header-text' primary="Blogs" />
                     </ListItemButton>
                     <Divider />
-                    <ListItemButton>
-                        <ListItemIcon>
-                            <MiscellaneousServicesIcon />
+                    <ListItemButton   className='nav-list-container' >
+                        <ListItemIcon className='nav-icon-container'>
+                            <MiscellaneousServicesIcon className='nav-icon'/>
                         </ListItemIcon>
-                        <ListItemText primary="Others" />
+                        <ListItemText disableTypography className='nav-header-text' primary="Others" />
                     </ListItemButton>
                     <Divider />
                 </List>

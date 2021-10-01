@@ -1,0 +1,35 @@
+.nav-list-container{
+    padding: 10px 15px 0px 15px !important;
+    width: 100% !important;
+    height: 80px !important;
+}
+
+.nav-icon-container{
+    min-width: 40px !important;
+}
+
+.nav-icon{
+    fill: blue !important;
+}
+
+
+.nav-header-text{
+    color: blue !important;
+    font-family: 'Sintony' !important;
+    font-size: large !important;
+}
+
+.navlist-item-container{
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.navlist-item{
+   padding-left: 60px !important; 
+}
+
+.navlist-item-text{
+    color: blue;
+    font-size: large;
+    font-family: 'Sintony';
+ }

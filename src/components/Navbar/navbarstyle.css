@@ -52,3 +52,33 @@
         height: 40px;
     }
 }
+@media screen and (min-width: 600px) {
+  .menu-icon{
+    display: none !important;
+  } 
+  .toolbar-icon{
+    display: block !important;
+    margin-right: 10px;
+  }
+  .top-div{
+    width: calc(100vw - 240px);
+    margin-left: 240px;
+    
+  }
+}
+@media screen and (max-width: 600px) {
+  .toolbar-icon{
+    margin-right: 10px;
+    display: none !important;
+  }
+  .top-div{
+    width: 100vw;
+  }
+}
+.top-div{
+  
+  height: 16rem;
+  /* width: 100vw; */
+  background: linear-gradient(
+-45deg, #06418E, #1572E8) !important;
+}

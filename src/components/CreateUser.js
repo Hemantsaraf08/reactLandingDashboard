@@ -25,7 +25,7 @@ function CreateUser() {
         e.preventDefault();
         setcurrUser(1);
         console.log("create user:",currUser)
-        history.push('/data-visualisation')
+        history.push('/dashboard')
     }
     return (
         <div className='register-display-card'>
