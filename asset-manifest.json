@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/reactLandingDashboard/static/css/main.4f999bc2.chunk.css",
-    "main.js": "/reactLandingDashboard/static/js/main.064b8096.chunk.js",
-    "main.js.map": "/reactLandingDashboard/static/js/main.064b8096.chunk.js.map",
+    "main.js": "/reactLandingDashboard/static/js/main.bc62929e.chunk.js",
+    "main.js.map": "/reactLandingDashboard/static/js/main.bc62929e.chunk.js.map",
     "runtime-main.js": "/reactLandingDashboard/static/js/runtime-main.361e530b.js",
     "runtime-main.js.map": "/reactLandingDashboard/static/js/runtime-main.361e530b.js.map",
-    "static/js/2.6f56d96d.chunk.js": "/reactLandingDashboard/static/js/2.6f56d96d.chunk.js",
-    "static/js/2.6f56d96d.chunk.js.map": "/reactLandingDashboard/static/js/2.6f56d96d.chunk.js.map",
+    "static/js/2.6f758b28.chunk.js": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js",
+    "static/js/2.6f758b28.chunk.js.map": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js.map",
     "index.html": "/reactLandingDashboard/index.html",
     "static/css/main.4f999bc2.chunk.css.map": "/reactLandingDashboard/static/css/main.4f999bc2.chunk.css.map",
-    "static/js/2.6f56d96d.chunk.js.LICENSE.txt": "/reactLandingDashboard/static/js/2.6f56d96d.chunk.js.LICENSE.txt",
+    "static/js/2.6f758b28.chunk.js.LICENSE.txt": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js.LICENSE.txt",
     "static/media/Vector.f7052a4d.svg": "/reactLandingDashboard/static/media/Vector.f7052a4d.svg",
     "static/media/contact.31263998.svg": "/reactLandingDashboard/static/media/contact.31263998.svg",
     "static/media/contact2.82767826.svg": "/reactLandingDashboard/static/media/contact2.82767826.svg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.361e530b.js",
-    "static/js/2.6f56d96d.chunk.js",
+    "static/js/2.6f758b28.chunk.js",
     "static/css/main.4f999bc2.chunk.css",
-    "static/js/main.064b8096.chunk.js"
+    "static/js/main.bc62929e.chunk.js"
   ]
 }
