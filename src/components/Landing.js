@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import "../css files/header.css"
 import "../css files/inclusion-container.css"
+import '../css files/landingmobilestyles.css'
 import vector from '../svgs/Vector.svg'
 import contact from '../svgs/contact.svg'
 import contact2 from '../svgs/contact2.svg'
@@ -13,9 +14,9 @@ function Landing() {
     console.log(currUser)
     const history = useHistory();
     const handleLoginClick = () => {
-        if(!currUser){
+        if (!currUser) {
             history.push('/register')
-        }else{
+        } else {
             setcurrUser(0);
         }
     }
@@ -23,7 +24,7 @@ function Landing() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <div className="nav-items">
+                    <div className="nav-items" id='logo'>
                         <a href="/" className="nav-single-item logo">
                             <img src={vector} alt="logo" />
                         </a>
@@ -44,14 +45,14 @@ function Landing() {
                         <p className="nav-single-item para">LEARNING LAB</p>
                     </div>
                     <hr className="navbar-line" />
-                    <div style={{ cursor: 'pointer' }} onClick={()=>history.push('/dashboard')} className="nav-items">
+                    <div style={{ cursor: 'pointer' }} onClick={() => history.push('/dashboard')} className="nav-items">
                         <p className="nav-single-item para">DASHBOARD</p>
                     </div>
                     <hr className="navbar-line" />
                     <div className="nav-items logindiv" onClick={handleLoginClick}>
                         <p className="nav-single-item para">
                             {
-                                currUser?"LOG OUT":"LOG IN"
+                                currUser ? "LOG OUT" : "LOG IN"
                             }
                         </p>
                     </div>
@@ -64,8 +65,7 @@ function Landing() {
                 </div>
                 <div className="inclusion-section">
                     <div className="inclusion-section-text">
-                        <h2 className="question-font">What is</h2>
-                        <h2 className="question-font" style={{ marginTop: "-25px" }}>Inclusion?</h2>
+                        <h2 className="question-font">What is Inclusion?</h2>
                         <p className="inclusion-text">Every person, regardless of their identity, is
                             instrumental to the transformation of their own
                             societies - and yet many are still denied full access
@@ -102,27 +102,31 @@ function Landing() {
                 <div className="inclusion-btn" style={{ width: "25%", margin: "auto" }}>LEARN MORE</div>
             </div>
             <div className="section3">
-                <div className="section3-text">
-                    <h3 style={{ marginBlockStart: "0", marginBlockEnd: "0" }} className="question-font">How to make your program more inclusive?</h3>
-                    <p className="inclusion-text" style={{ paddingRight: "80px", paddingTop: "20px" }}>While inclusion as an objective is inherent in development sector efforts, actors may be at
-                        different stages of their inclusion journey, and facing a diverse set of challenges. While some
-                        stakeholders may be concerned about identifying and reaching the 'last mile' or 'base of pyramid
-                        populations, others may be struggling to recruit and retain a diverse workforce or to integrate an
-                        inclusion lens across their program cycle. Wherever you are on this inclusion journey, the
-                        Inclusive Development Resource Guide aims to support your efforts.
-                    </p>
-                </div>
-                <div className="section3-svg">
-                    <img width="100%" height="100%" src={contact} alt="download info" />
+                <div className='section3-actual-container'>
+                    <div className="section3-text">
+                        <h4 className='question-font2'>How to make your program more inclusive?</h4>
+                        <p className="inclusion-text" style={{ paddingRight: "80px", paddingTop: "20px" }}>While inclusion as an objective is inherent in development sector efforts, actors may be at
+                            different stages of their inclusion journey, and facing a diverse set of challenges. While some
+                            stakeholders may be concerned about identifying and reaching the 'last mile' or 'base of pyramid
+                            populations, others may be struggling to recruit and retain a diverse workforce or to integrate an
+                            inclusion lens across their program cycle. Wherever you are on this inclusion journey, the
+                            Inclusive Development Resource Guide aims to support your efforts.
+                        </p>
+                    </div>
+                    <div className="section3-svg">
+                        <img width="100%" height="100%" src={contact} alt="download info" />
+                    </div>
                 </div>
             </div>
             <div className="contact-section">
-                <div className="contact-section-svg">
-                    <img style={{ marginTop: "-50px" }} width="100%" src={contact2} alt="contact svg" />
-                </div>
-                <div className="contact-info-container">
-                    <h2 className="question-font">Contact Us</h2>
-                    <p className="inclusion-text">Please share your questions, suggestions and insights with us at abc@abcmail.com</p>
+                <div className='contact-section-actual'>
+                    <div className="contact-section-svg">
+                        <img style={{ marginTop: "-50px" }} width="100%" src={contact2} alt="contact svg" />
+                    </div>
+                    <div className="contact-info-container">
+                        <h2 className="question-font">Contact Us</h2>
+                        <p className="inclusion-text">Please share your questions, suggestions and insights with us at abc@abcmail.com</p>
+                    </div>
                 </div>
             </div>
             <div className="blanck"></div>

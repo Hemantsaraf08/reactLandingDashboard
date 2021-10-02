@@ -21,23 +21,37 @@
 }
 .inclusion-section{
     display: flex;
+    flex-wrap: wrap-reverse;
     padding-bottom: 25px;
+    width: 100%;
 }
 .inclusion-section-text{
-    padding-top: 50px;
-    width: 55%;
-    height: 100%;
+    padding-top: 30px;
+    width: 35%;
+    min-width: 330px;
 }
 .inclusion-section-svg{
-    width: auto;
-    height: 100%;
+    width: 65%;
+    min-width: 330px;
 }
+
 .question-font{
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3.5rem;
     margin: 0;
     color: var(--color-blue);
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important
+}
+.question-font2{
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--color-blue);
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important
 }
 .inclusion-text{
     margin-top: 0px;
@@ -53,7 +67,6 @@
     font-weight: 800;
     padding:10px 30px;
     width: 70%;
-    height: 45px;
     text-align: center;
     margin-top: 30px;
 }
@@ -61,7 +74,7 @@
     width: 100vw;
     padding-left: var(--padding-all);
     padding-right: var(--padding-all);
-    padding-bottom: 65px;
+    padding-bottom: 65px !important;
     /* background-color: var(--color-light-blue); */
 }
 .section2-para{
@@ -81,7 +94,11 @@
     padding-left: var(--padding-all);
     background-color: var(--color-light-blue);
     width: 100vw;
+}
+.section3-actual-container{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .section3-text{
     width: 60%;
@@ -89,18 +106,22 @@
 }
 .section3-svg{
     width: 40%;
+    min-width: 380px;
     /* height: 370px; */
 }
 .contact-section{
-    display: flex;
-    height: 210px;
+    width: 100vw;
     padding-left: var(--padding-all);
     padding-right: var(--padding-all);
-    border-bottom: 80px;
-    border-color: var(--color-light-blue);
+}
+.contact-section-actual{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
 }
 .contact-section-svg{
     width: 50%;
+    min-width: 380px;
 }
 .contact-info-container{
     width: 50%;
@@ -128,4 +149,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.inclusion-section-text>h2{
+    margin-block-start: 0rem !important;
+    margin-block-end: 0rem !important;
 }
