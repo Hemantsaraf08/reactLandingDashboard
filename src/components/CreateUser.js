@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useTheme, makeStyles } from '@mui/styles';
+import { useTheme, makeStyles } from '@mui/material/styles';
 import '../css files/registerpage.css'
 import { UserContext } from './AuthProvider';
 import { useHistory } from 'react-router-dom'
