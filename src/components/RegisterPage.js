@@ -9,16 +9,6 @@ import Typography from '@mui/material/Typography';
 import '../css files/registerpage.css'
 import {UserContext} from './AuthProvider' 
 
-// const useStyles = makeStyles((theme) => {
-    // console.log(theme.typography.fontFamily);
-    // return({
-    // root: {
-    //   fontFamily: "'Sintony', sans-serif",
-    //   color: '#FF0000'
-    // },
-//   })});
-
-
 function RegisterPage() {
     const {currUser, setcurrUser}=useContext(UserContext);
     // const classes=useStyles();
@@ -61,10 +51,10 @@ function RegisterPage() {
             <div className='register-card'>
                 <div className='register-actions'>
                     <div style={setStyle('login')}className='login-btn' onClick={handleLoginSelected}>
-                        <Typography style={myTheme.typography} variant='h5'>Login</Typography>
+                        {/* <Typography style={//myTheme.typography} variant='h5'>Login</Typography> */}
                     </div>
                     <div style={setStyle('signup')}className='signup-btn' onClick={handleSignupSelected}>
-                        <Typography style={myTheme.typography} variant='h5'>Signup</Typography>
+                        {/* <Typography style={myTheme.typography} variant='h5'>Signup</Typography> */}
                     </div>
                 </div>
                 {
