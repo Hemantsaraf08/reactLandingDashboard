@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import {HashRouter, BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { createTheme, ThemeProvider,responsiveFontSizes  } from '@mui/material/styles';
 import Landing from "./components/Landing";
 import RegisterPage from "./components/RegisterPage";
@@ -30,13 +30,13 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthProvider>  
-        <Router>
+        <HashRouter>
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/register" component={RegisterPage} />
             <Route path='/dashboard' component={Appbar}/>
           </Switch>
-        </Router>
+        </HashRouter>
         </AuthProvider>
       </ThemeProvider>
     </>
