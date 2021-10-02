@@ -11,16 +11,12 @@ import {UserContext} from './AuthProvider'
 
 function RegisterPage() {
     const {currUser, setcurrUser}=useContext(UserContext);
-    // const classes=useStyles();
-    console.log("register comp",currUser)
     useEffect(()=>{
         if(currUser){
             history.push('/')
         }
     },[])
     const myTheme=useTheme();
-    // console.log(myTheme)
-    // console.log(props)
     const history = useHistory();
     const [selected, changeSelected] = useState('login');
     const handleLoginSelected = () => {
@@ -51,10 +47,10 @@ function RegisterPage() {
             <div className='register-card'>
                 <div className='register-actions'>
                     <div style={setStyle('login')}className='login-btn' onClick={handleLoginSelected}>
-                        {/* <Typography style={//myTheme.typography} variant='h5'>Login</Typography> */}
+                        <Typography style={{fontFamily: myTheme.typography.fontFamily}} variant='h5'>Login</Typography>
                     </div>
                     <div style={setStyle('signup')}className='signup-btn' onClick={handleSignupSelected}>
-                        {/* <Typography style={myTheme.typography} variant='h5'>Signup</Typography> */}
+                        <Typography style={{fontFamily: myTheme.typography.fontFamily}} variant='h5'>Signup</Typography>
                     </div>
                 </div>
                 {

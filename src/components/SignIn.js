@@ -2,23 +2,15 @@ import React,{useContext} from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { makeStyles, useTheme } from '@mui/material/styles';
+import {useTheme } from '@mui/material/styles';
 import '../css files/registerpage.css'
 import { useHistory } from 'react-router-dom'
 import { UserContext } from './AuthProvider';
-const useStyles = makeStyles(theme => ({
-    btn: {
-        fontFamily: theme.typography.fontFamily, 
-        borderRadius: '0px', 
-        boxShadow: 'none'
-    }
-}))
+
 
 function SignIn(props) {
-    // console.log(props);
     const {setcurrUser}=useContext(UserContext);
     const history=useHistory();
-    const classes=useStyles();
     const myTheme = useTheme();
     const handleClick=(e)=>{
         e.preventDefault();
@@ -28,7 +20,7 @@ function SignIn(props) {
     return (
         <div className='register-display-card'>
             <div className='register-title'>
-                <Typography style={myTheme.typography} variant="h4">
+                <Typography style={{fontFamily: myTheme.typography.fontFamily}} variant="h4">
                     Welcome back!
                 </Typography>
             </div>
@@ -51,8 +43,8 @@ function SignIn(props) {
                     required
                 />
 
-                <Button variant="contained" onClick={handleClick} className={classes.btn}>Sign In</Button>
-                <Button variant="contained" className={classes.btn} disabled>
+                <Button variant="contained" onClick={handleClick} style={{fontFamily: myTheme.typography.fontFamily, borderRadius: '0px', boxShadow: 'none' }}>Sign In</Button>
+                <Button variant="contained" style={{fontFamily: myTheme.typography.fontFamily, borderRadius: '0px', boxShadow: 'none' }} disabled>
                     Sign in with Google
                 </Button>
             </div>

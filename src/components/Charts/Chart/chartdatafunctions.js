@@ -52,13 +52,10 @@ export const fetchdata = async (url) => {
 };
 export const getStatecodes = (data) => {
   let codesArr = [];
-  let noOfStates = 0;
   for (let key in data) {
     let topush = ans[key] !== undefined ? ans[key] : "couldn't find";
     codesArr.push(topush);
-    noOfStates += 1;
   }
-  // console.log({noOfStates});
   return codesArr;
 };
 export const getStatePopulation = (data) => {

@@ -12,8 +12,6 @@ import Select from '@mui/material/Select';
 import './chart1styles.css'
 function ChartThree({ objofDistrictdata }) {
   const [selectedState, setselectedState] = useState('Karnataka');
-  const [open, setOpen] = useState(false);
-  // console.log(objofDistrictdata)
 
   const series = [
     {

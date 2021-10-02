@@ -28,9 +28,9 @@ export default function NestedList() {
     
         let newTop =
           (parseInt(scrollTop, 10) / parseInt(scrollHeight, 10)) * offsetHeight;
-        console.log(newTop, scrollBoxHeight, scrollTop, scrollHeight, offsetHeight);
+        // console.log(newTop, scrollBoxHeight, scrollTop, scrollHeight, offsetHeight);
     
-        console.log(offsetHeight - scrollBoxHeight);
+        // console.log(offsetHeight - scrollBoxHeight);
         // newTop = newTop + parseInt(scrollTop, 10);
         newTop = Math.min(newTop, offsetHeight - scrollBoxHeight);
         setScrollBoxTop(newTop);
@@ -75,7 +75,7 @@ export default function NestedList() {
         e.stopPropagation();
         setScrollThumbPosition(e.clientY);
         setDragging(true);
-        console.log("handleScrollThumbMouseDown");
+        // console.log("handleScrollThumbMouseDown");
       }, []);
 
       useEffect(() => {

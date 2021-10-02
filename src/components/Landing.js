@@ -11,7 +11,6 @@ import { useHistory } from 'react-router-dom'
 import { UserContext } from './AuthProvider'
 function Landing() {
     const { currUser, setcurrUser } = useContext(UserContext);
-    console.log(currUser)
     const history = useHistory();
     const handleLoginClick = () => {
         if (!currUser) {

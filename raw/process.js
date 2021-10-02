@@ -1,16 +1,4 @@
-// const staten=require('./statenames.json');
-// // console.log(staten);
 
-// let reqObj={};
-
-// for(let key in staten){
-//     let valObj=staten[key];
-//     let val=valObj["FIELD2"]
-//     // console.log(val)
-//     reqObj[key]=val;
-// }
-// console.log(reqObj);
-// console.log(reqObj.MP);
 let ans={
   AN: 'Andaman and Nicobar',
   AP: 'Andhra Pradesh',

@@ -12,7 +12,6 @@ export default function App() {
   const [startingPoint, setstartingPoint]=useState(0);
   const [chartReady, setchartReady]=useState(false);
   const handleNextClick=()=>{
-    console.log("handlenext ",startingPoint+limit)
     setstartingPoint(startingPoint+limit)
     setchartReady(false);
   }
@@ -79,14 +78,10 @@ export default function App() {
         let vaccinated1Arr=getStateVaccinated1(data);
         let vaccinated2Arr=getStateVaccinated2(data);
         setstatecodesArr(codes.slice(startingPoint, limit+startingPoint));
-        console.log(codes.slice(startingPoint, limit+startingPoint))
         setstatepopulationArr(statePopulationArr.slice(startingPoint, limit+startingPoint));
-        console.log(statePopulationArr.slice(startingPoint, limit+startingPoint))
         setstatevaccinate1(vaccinated1Arr.slice(startingPoint, limit+startingPoint))
         setstatevaccinate2(vaccinated2Arr.slice(startingPoint, limit+startingPoint))
-        console.log(vaccinated2Arr.slice(startingPoint, limit+startingPoint))
         setchartReady(true)
-        console.log({chartReady})
       }catch(e){
         console.log(e);
         setError(e.message);

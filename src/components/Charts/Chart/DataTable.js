@@ -3,7 +3,6 @@ import { DataGrid } from '@mui/x-data-grid';
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 const columns = [
   { field: 'id', headerName: 'State Name', width: 150,sortable:false },

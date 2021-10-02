@@ -27,7 +27,7 @@ function SmallcardParent() {
     }
 
     let fetchDate = currdate.toString().split(" ").slice(0, 5).join(' ');
-    // console.log(reqdate1,reqdate2);
+
     async function fetchdata(url) {
       let data;
       try {

@@ -17,7 +17,7 @@ import {
 
 
 function ChartParent() {
-  console.log('I chartparent was played')
+
     const [statecodesArr, setstatecodesArr] = useState(null);
   const [statepopulationArr, setstatepopulationArr] = useState(null);
   const [statevaccinate1, setstatevaccinate1] = useState(null);
@@ -42,7 +42,6 @@ function ChartParent() {
         setstatevaccinate2(vaccinated2Arr);
         setobjofDistrictdata(objofdistrictdata);
         setchartReady(true);
-        console.log({ chartReady });
       } catch (e) {
         console.log(e);
         setError(e.message);
