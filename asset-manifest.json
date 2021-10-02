@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/reactLandingDashboard/static/css/main.4f999bc2.chunk.css",
-    "main.js": "/reactLandingDashboard/static/js/main.bc62929e.chunk.js",
-    "main.js.map": "/reactLandingDashboard/static/js/main.bc62929e.chunk.js.map",
+    "main.css": "/reactLandingDashboard/static/css/main.24751cf8.chunk.css",
+    "main.js": "/reactLandingDashboard/static/js/main.a5642a3b.chunk.js",
+    "main.js.map": "/reactLandingDashboard/static/js/main.a5642a3b.chunk.js.map",
     "runtime-main.js": "/reactLandingDashboard/static/js/runtime-main.361e530b.js",
     "runtime-main.js.map": "/reactLandingDashboard/static/js/runtime-main.361e530b.js.map",
-    "static/js/2.6f758b28.chunk.js": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js",
-    "static/js/2.6f758b28.chunk.js.map": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js.map",
+    "static/js/2.95b9cde9.chunk.js": "/reactLandingDashboard/static/js/2.95b9cde9.chunk.js",
+    "static/js/2.95b9cde9.chunk.js.map": "/reactLandingDashboard/static/js/2.95b9cde9.chunk.js.map",
     "index.html": "/reactLandingDashboard/index.html",
-    "static/css/main.4f999bc2.chunk.css.map": "/reactLandingDashboard/static/css/main.4f999bc2.chunk.css.map",
-    "static/js/2.6f758b28.chunk.js.LICENSE.txt": "/reactLandingDashboard/static/js/2.6f758b28.chunk.js.LICENSE.txt",
-    "static/media/Vector.f7052a4d.svg": "/reactLandingDashboard/static/media/Vector.f7052a4d.svg",
-    "static/media/contact.31263998.svg": "/reactLandingDashboard/static/media/contact.31263998.svg",
-    "static/media/contact2.82767826.svg": "/reactLandingDashboard/static/media/contact2.82767826.svg",
-    "static/media/inclusion.8d0d5afb.svg": "/reactLandingDashboard/static/media/inclusion.8d0d5afb.svg",
-    "static/media/peoples.76d2863b.svg": "/reactLandingDashboard/static/media/peoples.76d2863b.svg"
+    "static/css/main.24751cf8.chunk.css.map": "/reactLandingDashboard/static/css/main.24751cf8.chunk.css.map",
+    "static/js/2.95b9cde9.chunk.js.LICENSE.txt": "/reactLandingDashboard/static/js/2.95b9cde9.chunk.js.LICENSE.txt",
+    "static/media/Vector.219e20a5.svg": "/reactLandingDashboard/static/media/Vector.219e20a5.svg",
+    "static/media/contact.67cb7c50.svg": "/reactLandingDashboard/static/media/contact.67cb7c50.svg",
+    "static/media/contact2.e3a8015e.svg": "/reactLandingDashboard/static/media/contact2.e3a8015e.svg",
+    "static/media/inclusion.2fbcf251.svg": "/reactLandingDashboard/static/media/inclusion.2fbcf251.svg",
+    "static/media/peoples.c11b100a.svg": "/reactLandingDashboard/static/media/peoples.c11b100a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.361e530b.js",
-    "static/js/2.6f758b28.chunk.js",
-    "static/css/main.4f999bc2.chunk.css",
-    "static/js/main.bc62929e.chunk.js"
+    "static/js/2.95b9cde9.chunk.js",
+    "static/css/main.24751cf8.chunk.css",
+    "static/js/main.a5642a3b.chunk.js"
   ]
 }
