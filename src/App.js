@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { ThemeProvider} from '@mui/styles';
+import { createTheme, ThemeProvider,responsiveFontSizes  } from '@mui/material/styles';
 import Landing from "./components/Landing";
 import RegisterPage from "./components/RegisterPage";
 import AuthProvider from "./components/AuthProvider";
 import Appbar from './components/appbar/Appbar'
-const theme = {
+let  theme = createTheme({
   palette: {
     primary: {
       main: '#004890'
@@ -14,14 +14,16 @@ const theme = {
       contrastText: '#000000'
     },
     text: {
-      secondary: '#BCE3F8'
+      secondary: '#4f4fff'
     }
   },
   typography: {
     fontFamily: "'Sintony', sans-serif"
   }
 
-}
+})
+
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (

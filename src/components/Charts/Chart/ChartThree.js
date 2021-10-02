@@ -9,7 +9,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
+import './chart1styles.css'
 function ChartThree({ objofDistrictdata }) {
   const [selectedState, setselectedState] = useState('Karnataka');
   const [open, setOpen] = useState(false);
@@ -43,7 +43,7 @@ function ChartThree({ objofDistrictdata }) {
     <Card>
       <CardHeader
         title={
-          <Typography sx={{ typography: { xs: "body1", sm: "h6" } }}>
+          <Typography variant='h6'>
             District vaccination rate(2nd dose)
           </Typography>
         }
@@ -59,7 +59,7 @@ function ChartThree({ objofDistrictdata }) {
             >
               {
                 Object.keys(objofDistrictdata).map((keyname, index) => (
-                  <MenuItem key={index} value={keyname}>{keyname}</MenuItem>
+                  <MenuItem className='menu-item-chart3' key={index} value={keyname}>{keyname}</MenuItem>
                 ))
               }
             </Select>
@@ -72,7 +72,7 @@ function ChartThree({ objofDistrictdata }) {
           options={options}
           series={series}
           type="treemap"
-          height={460}
+          height={500}
         />
       </CardContent>
     </Card>

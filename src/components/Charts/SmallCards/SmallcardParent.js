@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
-import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import SmallcardChild3 from './SmallcardChild3';
@@ -71,7 +70,9 @@ function SmallcardParent() {
         error ? (
           <h2>{error}</h2>
         ) : !carddatastatsObj ? (
-          <CircularProgress />
+          <div style={{width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent:'center'}}>
+            <CircularProgress />
+          </div>
         ) : (<>
           <Grid item xs={12} md={3}>
             <Paper>

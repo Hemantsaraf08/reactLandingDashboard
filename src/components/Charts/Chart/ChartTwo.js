@@ -45,7 +45,7 @@ function ChartTwo({ statecodesArr, statepopulationArr, statevaccinate2 }) {
     <Card>
       <CardHeader
         title={
-          <Typography sx={{ typography: { xs: "body1", sm: "h6" } }}>
+          <Typography variant='h6'>
             Vaccine 2nd Dose Coverage
           </Typography>
         }

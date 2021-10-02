@@ -6,3 +6,7 @@
     margin-left: 0;
   }
   
+.menu-item-chart3{
+  display: flex !important;
+  padding: 5px !important;
+}

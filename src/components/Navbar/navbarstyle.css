@@ -62,8 +62,10 @@
   }
   .top-div{
     width: calc(100vw - 240px);
-    margin-left: 240px;
-    
+    margin-left: 240px; 
+  }
+  .top-div-inner{
+    margin-top: 105px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -74,11 +76,32 @@
   .top-div{
     width: 100vw;
   }
+  .top-div-inner{
+    margin-top: 90px;
+  }
+  .heading-caption{
+    margin-left: 110px !important;
+  }
 }
 .top-div{
-  
   height: 16rem;
   /* width: 100vw; */
   background: linear-gradient(
--45deg, #06418E, #1572E8) !important;
+-45deg, #2985e0, #004890) !important;
+}
+.charts-box{
+  background: linear-gradient(
+-45deg, #ffffff, #f8f8f8) !important;
+}
+.app-footer{
+  background-color: white;
+  margin-top: 70px;
+
+}
+.footer-div{
+  margin: 24px 0px 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

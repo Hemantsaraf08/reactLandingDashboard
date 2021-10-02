@@ -7,12 +7,12 @@ import './smallcardstyles.css';
 function SmallcardChild2({totalDeaths, todaysDeaths}) {
 
     return (
-        <Card>
-            <CardContent>
+        <Card className='smallcard-card'>
+            <CardContent className='smallcard-content'>
                 <Typography variant='h6' gutterBottom={true} className='smallcard-primary-label'>TOTAL DEATHS</Typography>
                 <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{totalDeaths}</Typography>
                 <Divider className='smallcard-secondary-divider'><Typography className='smallcard-secondary-label'>TODAY</Typography></Divider>
-                <Typography variant='subtitle1' className='smallcard-secondary-number'>{todaysDeaths}</Typography>
+                <Typography variant='h5' className='smallcard-secondary-number'>{todaysDeaths}</Typography>
             </CardContent>
         </Card>
     )

@@ -55,7 +55,9 @@ function ChartParent() {
             {error ? (
         <h2>{error}</h2>
       ) : !chartReady ? (
+        <div style={{width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent:'center'}}>
         <LinearProgress />
+        </div>
       ) : ( 
           <>
             <Grid item xs={12} md={7}>

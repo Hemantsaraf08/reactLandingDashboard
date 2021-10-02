@@ -110,7 +110,7 @@ export default function ChartOne({statecodesArr, statepopulationArr, statevaccin
                 </>
               }
               title={
-                <Typography sx={{ typography: { xs: "body1", sm: "h6" } }}>
+                <Typography variant='h6'>
                   Population vs Vaccine Coverage
                 </Typography>
               }

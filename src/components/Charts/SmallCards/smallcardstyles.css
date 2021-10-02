@@ -1,19 +1,39 @@
 .smallcard-primary-label{
-    color: rgb(107, 119, 140);
+    color: rgb(116, 117, 119);
     line-height: 1.6;
-    font-weight: 500;
+    font-weight:600 !important;
+    font-family: 'Sintony' !important;
+    font-size: large !important;
 }
+
+.smallcard-secondary-label{
+    color: rgb(116, 117, 119);
+    /* line-height: 1.6; */
+    /* font-weight:500 !important; */
+    font-family: 'Sintony' !important;
+    /* font-size: large !important; */
+}
+
 .smallcard-primary-number{
     line-height: 1.6;
     font-weight: 500;
 }
 .smallcard-secondary-divider{
-    padding-top: 16px;
+    padding-top: 10px;
 }
 
-.smallcard-primary-number
+/* .smallcard-primary-number
 .smallcard-primary-label
 .smallcard-secondary-number{
-    text-align: center;
+    text-align: center !important;
+} */
+.smallcard-card{
+    height: 200px !important;
+    background-color: #f6f6f6;
+background-image: linear-gradient(315deg, #f6f6f6 0%, #f3f3f3 74%);
 }
 
+.smallcard-content{
+    text-align: center;
+    padding: 20px !important;
+}

@@ -13,7 +13,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Sidebar from '../Navbar/Sidebar'
-import { useTheme} from '@mui/styles';
+import { useTheme } from '@mui/material/styles';
 import '../Navbar/navbarstyle.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -26,6 +26,9 @@ import SmallcardParent from '../Charts/SmallCards/SmallcardParent';
 import ChartParent from '../Charts/Chart/ChartParent';
 import Tooltip from '@mui/material/Tooltip';
 import Grid from '@mui/material/Grid';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -84,7 +87,7 @@ function ResponsiveDrawer(props) {
 
     const drawer = (
         <div>
-            <Toolbar aria-label='app-logo'  onClick={() => history.push('/')} style={{ backgroundColor: myTheme.palette.primary.main, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Toolbar aria-label='app-logo'  onClick={() => history.push('/')} style={{backgroundColor: myTheme.palette.primary.main,display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <img src={vector} alt="logo" />
             </Toolbar>
             <Divider />
@@ -264,17 +267,36 @@ function ResponsiveDrawer(props) {
                     {drawer}
                 </Drawer>
             </Box>
-            <div style={{display: 'flex', flexDirection: 'column'}}>
+            <div className='charts-box' style={{display: 'flex', flexDirection: 'column'}}>
             <div className='top-div'>
-                <div style={{marginTop: '80px', paddingLeft: '30px'}}>
-            <Typography variant='h2'>India Covid statistics</Typography>
-            <Typography variant='subtitle1'>Last data fetched on: {new Date().toString().substring(0,24)}</Typography>
+                <div className='top-div-inner' style={{paddingLeft: '30px'}}>
+            <Typography variant='h3' style={{color: 'white'}}>India Covid-19 stats</Typography>
+            <Typography  style={{paddingTop:'5px', color:'beige'}}variant='subtitle1' component='div'>
+                Last data fetched on: {new Date().toString().substring(0,24)}
+                <Typography className='heading-caption' style={{marginTop: '-5px', color:'beige'}}variant='caption'>&nbsp; &nbsp; [Data not for direct inference]</Typography>
+            </Typography>
                  </div>   
             </div>
-            <Box component="main" sx={{flexGrow: 1, marginTop:'-5.5rem' ,padding: "40px 15px 10px 15px" , width: {sm:`calc(100vw - ${drawerWidth}px)`, xs: '100vw'}, ml: { sm: `${drawerWidth}px` }}}>
+            <Box  component="main" sx={{flexGrow: 1, marginTop:'-5.5rem' ,padding: "40px 15px 10px 15px" , width: {sm:`calc(100vw - ${drawerWidth}px)`, xs: '100vw'}, ml: { sm: `${drawerWidth}px` }}}>
             <Grid container  spacing={3}>
                 <SmallcardParent/>
                 <ChartParent/>
+                <Grid item xs={12}>
+                    <footer className='app-footer'>
+                        <Divider/>
+                        <div  className='footer-div'>
+                            <Typography  style={{margin: '0px 16px'}}variant='body1'>Did you Like it?</Typography>
+                            <div className='like-button-container'>
+                                <button style={{margin: '8px'}}  onClick={()=>window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
+                                    <ThumbUpAltIcon/>;
+                                </button>
+                                <button style={{margin: '8px'}}onClick={()=>window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
+                                     <ThumbDownAltIcon/>
+                                </button>
+                            </div>
+                        </div>
+                    </footer>
+                </Grid>
             </Grid>
             </Box>
             </div>

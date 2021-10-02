@@ -7,13 +7,19 @@ import './smallcardstyles.css';
 function SmallcardChild4({recoveryRate, recoveredToday}) {
 
     return (
-        <Card>
-            <CardContent>
-                <Typography variant='h6' gutterBottom={true} className='smallcard-primary-label'>RECOVERY RATE</Typography>
-                <Typography variant='h3' style={{color: 'black'}} className='smallcard-primary-number'>{recoveryRate}</Typography>
-                <Typography variant='h3'component='span'>%</Typography>
-                <Divider className='smallcard-secondary-divider'><Typography className='smallcard-secondary-label'>RECOVERED TODAY</Typography></Divider>
-                <Typography variant='subtitle1' className='smallcard-secondary-number'>{recoveredToday}</Typography>
+        <Card className='smallcard-card'> 
+            <CardContent className='smallcard-content'>
+                <Typography variant='h6' gutterBottom={true} className='smallcard-primary-label'>
+                    RECOVERY RATE
+                </Typography>
+                <Typography variant='h3' ccomponent='div' style={{color: 'black'}}>
+                    {recoveryRate}
+                <Typography variant='h4'component='span'>%</Typography>
+                </Typography>
+                <Divider className='smallcard-secondary-divider'>
+                    <Typography className='smallcard-secondary-label'>RECOVERED TODAY</Typography>
+                </Divider>
+                <Typography variant='h5' className='smallcard-secondary-number'>{recoveredToday}</Typography>
             </CardContent>
         </Card>
     )
