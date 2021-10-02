@@ -4,6 +4,8 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Box from '@mui/material/Box';
+
 const columns = [
   { field: 'id', headerName: 'State Name', width: 150,sortable:false },
   {field: 'population', headerName: 'Population', width: 150, type: 'number', description: 'Population (in Lakhs)'},
@@ -48,7 +50,9 @@ export default function DataTable({statecodesArr, statepopulationArr,statevaccin
           </Typography>
         }
       />
+
       <CardContent style={{ height: 470, width: 800, margin: 'auto'}}>
+      <Box width={{xs:'380px',sm:'400px', md:'100%'}} height={'100%'}>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -56,6 +60,7 @@ export default function DataTable({statecodesArr, statepopulationArr,statevaccin
         rowsPerPageOptions={[6]}
         loading={tableloading}
         />
+        </Box>
         </CardContent>
     </Card>
   );

@@ -17,7 +17,7 @@ function SmallcardChild3({totalVaccinated, vaccinationrateinc}) {
                     <Typography className='smallcard-secondary-label'>RATE CHANGE</Typography>
                 </Divider>
                 
-                <div style={{display: "flex","alignItems": "center"}}>
+                <div style={{display: "flex","alignItems": "center" , justifyContent: 'center', textAlign: 'center'}}>
                 {
                     vaccinationrateinc>0?<ArrowUpwardIcon style={{fontSize: '1.5rem'}}/>:<ArrowDownwardIcon style={{fontSize: '1.5rem'}}/>
                 }

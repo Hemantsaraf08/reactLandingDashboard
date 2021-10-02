@@ -73,14 +73,13 @@ function ChartParent() {
             </Grid>
             <Grid item xs={12}>
               <Paper>
-
             <ChartThree objofDistrictdata={objofDistrictdata}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={12}>
-              <Paper>
+              {/* <Paper> */}
             <DataTable statecodesArr={statecodesArr} statepopulationArr={statepopulationArr} statevaccinate1={statevaccinate1} statevaccinate2={statevaccinate2}/>
-              </Paper>
+              {/* </Paper> */}
             </Grid>
           </>
         )}

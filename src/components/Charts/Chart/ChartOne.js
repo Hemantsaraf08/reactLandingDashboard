@@ -93,7 +93,7 @@ export default function ChartOne({statecodesArr, statepopulationArr, statevaccin
                     disabled={startingPoint <= 4}
                     onClick={handlePreviousClick}
                     variant="text"
-                    startIcon={<ArrowBackIosIcon />}
+                    startIcon={<ArrowBackIosIcon/>}
                   >
                     PREV
                   </Button>

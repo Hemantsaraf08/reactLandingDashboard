@@ -87,7 +87,7 @@ function ResponsiveDrawer(props) {
 
     const drawer = (
         <div>
-            <Toolbar aria-label='app-logo'  onClick={() => history.push('/')} style={{backgroundColor: myTheme.palette.primary.main,display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Toolbar aria-label='app-logo' onClick={() => history.push('/')} style={{ backgroundColor: myTheme.palette.primary.main, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <img src={vector} alt="logo" />
             </Toolbar>
             <Divider />
@@ -108,7 +108,7 @@ function ResponsiveDrawer(props) {
             <Sidebar />
         </div>
     );
-   
+
     //   const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
@@ -164,15 +164,15 @@ function ResponsiveDrawer(props) {
                         <LinkedInIcon style={{ fontSize: '2rem' }} />
                     </IconButton>
                     <Tooltip title="Fetch latest data">
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        className='toolbar-icon'
-                        onClick={()=>window.location.reload()}
-                    >
-                        <ReplayIcon style={{ fontSize: '2rem' }} />
-                    </IconButton>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            className='toolbar-icon'
+                            onClick={() => window.location.reload()}
+                        >
+                            <ReplayIcon style={{ fontSize: '2rem' }} />
+                        </IconButton>
                     </Tooltip>
                     <IconButton
                         color="inherit"
@@ -214,15 +214,15 @@ function ResponsiveDrawer(props) {
                         <LinkedInIcon />
                     </IconButton>
                     <Tooltip title='Fetch latest data'>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={()=>window.location.reload()}
-                    //sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
-                    >
-                        <ReplayIcon />
-                    </IconButton>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={() => window.location.reload()}
+                        //sx={{ mr: 2, display: { sm: 'block', xs: 'none' } }}
+                        >
+                            <ReplayIcon />
+                        </IconButton>
                     </Tooltip>
                     <IconButton
                         color="inherit"
@@ -237,7 +237,7 @@ function ResponsiveDrawer(props) {
             </AppBar>
             <Box
                 component="nav"
-                sx={{flexShrink: { sm: 0 } }}
+                sx={{ flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"
                 className='scrollhost'
             >
@@ -267,38 +267,46 @@ function ResponsiveDrawer(props) {
                     {drawer}
                 </Drawer>
             </Box>
-            <div className='charts-box' style={{display: 'flex', flexDirection: 'column'}}>
-            <div className='top-div'>
-                <div className='top-div-inner' style={{paddingLeft: '30px'}}>
-            <Typography variant='h3' style={{color: 'white'}}>India Covid-19 stats</Typography>
-            <Typography  style={{paddingTop:'5px', color:'beige'}}variant='subtitle1' component='div'>
-                Last data fetched on: {new Date().toString().substring(0,24)}
-                <Typography className='heading-caption' style={{marginTop: '-5px', color:'beige'}}variant='caption'>&nbsp; &nbsp; [Data not for direct inference]</Typography>
-            </Typography>
-                 </div>   
-            </div>
-            <Box  component="main" sx={{flexGrow: 1, marginTop:'-5.5rem' ,padding: "40px 15px 10px 15px" , width: {sm:`calc(100vw - ${drawerWidth}px)`, xs: '100vw'}, ml: { sm: `${drawerWidth}px` }}}>
-            <Grid container  spacing={3}>
-                <SmallcardParent/>
-                <ChartParent/>
-                <Grid item xs={12}>
-                    <footer className='app-footer'>
-                        <Divider/>
-                        <div  className='footer-div'>
-                            <Typography  style={{margin: '0px 16px'}}variant='body1'>Did you Like it?</Typography>
-                            <div className='like-button-container'>
-                                <button style={{margin: '8px'}}  onClick={()=>window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
-                                    <ThumbUpAltIcon/>;
-                                </button>
-                                <button style={{margin: '8px'}}onClick={()=>window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
-                                     <ThumbDownAltIcon/>
-                                </button>
-                            </div>
-                        </div>
-                    </footer>
-                </Grid>
-            </Grid>
-            </Box>
+            <div className='charts-box' style={{ display: 'flex', flexDirection: 'column' }}>
+                <div className='top-div'>
+                    <div className='top-div-inner' style={{ paddingLeft: '30px' }}>
+                        <Box display={{ xs: "none", sm: "none", md: "block" }}>
+                                <Typography variant='h3' style={{ color: 'white' }}>India Covid-19 stats</Typography>
+                        </Box>
+                        <Box display={{ xs: "none", sm: "block", md: "none" }}>
+                                <Typography variant='h4' style={{ color: 'white' }}>India Covid-19 stats</Typography>
+                        </Box>
+                        <Box display={{ xs: "block", sm: "none", md: "none" }}>
+                                <Typography variant='h5' style={{ color: 'white' }}>India Covid-19 stats</Typography>
+                        </Box>
+                        <Typography style={{ paddingTop: '5px', color: 'beige' }} variant='subtitle1' component='div'>
+                            Last data fetched on: {new Date().toString().substring(0, 24)}
+                            <Typography className='heading-caption' style={{ marginTop: '-5px', color: 'beige' }} variant='caption'>&nbsp; &nbsp; [Data not for direct inference]</Typography>
+                        </Typography>
+                    </div>
+                </div>
+                <Box component="main" sx={{ flexGrow: 1, marginTop: '-5.5rem', padding: "40px 15px 10px 15px", width: { sm: `calc(100vw - ${drawerWidth}px)`, xs: '100vw' }, ml: { sm: `${drawerWidth}px` } }}>
+                    <Grid container spacing={3}>
+                        <SmallcardParent />
+                        <ChartParent />
+                        <Grid item xs={12}>
+                            <footer className='app-footer'>
+                                <Divider />
+                                <div className='footer-div'>
+                                    <Typography style={{ margin: '0px 16px' }} variant='body1'>Did you Like it?</Typography>
+                                    <div className='like-button-container'>
+                                        <button style={{ margin: '8px' }} onClick={() => window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
+                                            <ThumbUpAltIcon />;
+                                        </button>
+                                        <button style={{ margin: '8px' }} onClick={() => window.open('https://forms.gle/amLF2miJ6QwDt1fK7', '_blank')}>
+                                            <ThumbDownAltIcon />
+                                        </button>
+                                    </div>
+                                </div>
+                            </footer>
+                        </Grid>
+                    </Grid>
+                </Box>
             </div>
         </Box>
     );
