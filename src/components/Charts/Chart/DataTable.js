@@ -52,7 +52,7 @@ export default function DataTable({statecodesArr, statepopulationArr,statevaccin
       />
 
       <CardContent style={{ height: 470, width: 800, margin: 'auto'}}>
-      <Box width={{xs:'380px',sm:'400px', md:'100%'}} height={'100%'}>
+      <Box width={{xs:'300px',sm:'400px', md:'100%'}} height={'100%'}>
       <DataGrid
         rows={rows}
         columns={columns}

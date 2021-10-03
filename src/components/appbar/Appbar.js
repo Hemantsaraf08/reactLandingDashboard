@@ -134,7 +134,7 @@ function ResponsiveDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography style={{ fontFamily: myTheme.typography.fontFamily, fontWeight: '500' }} sx={{ margin: { sm: '10px', xs: 'auto' } }} variant="h5" noWrap component="div">
-                        My Dashboard
+                        Covid Dashboard
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
